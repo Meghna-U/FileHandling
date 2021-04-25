@@ -12,10 +12,10 @@ void main()
 	}
 	printf("Content in file:");
 	p=getc(fptr1);
-	while(c!=EOF)
+	while(p!=EOF)
 	{
 		n++;
-		putchar(c);
+		putchar(p);
 		srev[i]=p;
 		i++;
 		p=getc(fptr1);
