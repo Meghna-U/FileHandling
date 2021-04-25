@@ -3,7 +3,7 @@
 void main()
 {
 	FILE *fptr1,*fptr2;
-	char c,srev[100];
+	char p,srev[100];
 	int i=0,j,n=0;
 	fptr1=fopen("file1.txt","r");
 	if(!fptr1)
@@ -11,20 +11,20 @@ void main()
 		printf("Cannot open the file");
 	}
 	printf("Content in file:");
-	c=getc(fptr1);
+	p=getc(fptr1);
 	while(c!=EOF)
 	{
 		n++;
 		putchar(c);
-		srev[i]=c;
+		srev[i]=p;
 		i++;
-		c=getc(fptr1);
+		p=getc(fptr1);
 	}
 	printf("\nContent in reverse order:");
 	for(j=n-1;j>=0;j--)
 	{
-		c=srev[j];
-		printf("%c",c);
+		p=srev[j];
+		printf("%c",p);
 	}
 	fclose(fptr1);
 	fptr1=fopen("file1.txt","r");
@@ -37,11 +37,11 @@ void main()
 	{
 		printf("Cannot open the file");
 	}
-	c=fgetc(fptr1);
-	while(c!=EOF)
+	p=fgetc(fptr1);
+	while(p!=EOF)
 	{
-		fputc(c,fptr2);
-		c=fgetc(fptr1);
+		fputc(p,fptr2);
+		p=fgetc(fptr1);
 	}
 	fclose(fptr1);
 	fclose(fptr2);
